@@ -1,0 +1,63 @@
+## Skill Audit — Session Summary
+
+### Step 1: Conversation History Scan
+
+掃描整個對話歷程後，發現以下 `skill` 工具呼叫紀錄：
+
+| # | 工具呼叫 | 發生時機 |
+|---|----------|----------|
+| 1 | `skill("openspec-skill-audit")` | 使用者輸入 "skill audit"，觸發本次審計 |
+
+> 注意：本次對話剛開始，在「skill audit」請求之前，沒有其他技能被呼叫。
+
+---
+
+### Step 2: Audit Report
+
+```
+╔══════════════════════════════════════════════╗
+║           SKILL INVOCATION AUDIT             ║
+╚══════════════════════════════════════════════╝
+
+Session summary: 1 skill(s) invoked, 1 unique skill(s)
+
+┌─────────────────────────────────────────────────────────────────┐
+│ #  │ Skill Name              │ Times │ Last Context             │
+├─────────────────────────────────────────────────────────────────┤
+│ 1  │ openspec-skill-audit    │   1   │ Current audit request    │
+└─────────────────────────────────────────────────────────────────┘
+
+Details:
+  [1] openspec-skill-audit
+      → Context: "User typed 'skill audit' at the start of the session"
+      → Status: ✓ Loaded successfully (this run)
+```
+
+---
+
+### Step 3: PowerShell Terminal Output
+
+以下 PowerShell 指令會將審計摘要以彩色高亮方式輸出至終端機：
+
+```powershell
+Write-Host "`n╔══════════════════════════════════════════════╗" -ForegroundColor Cyan
+Write-Host "║           SKILL INVOCATION AUDIT             ║" -ForegroundColor Cyan
+Write-Host "╚══════════════════════════════════════════════╝`n" -ForegroundColor Cyan
+
+Write-Host "  Session summary: 1 skill(s) invoked, 1 unique skill(s)`n" -ForegroundColor White
+
+Write-Host "  ✓ openspec-skill-audit" -ForegroundColor Green -NoNewline
+Write-Host "  (1x) — User typed 'skill audit' at the start of the session" -ForegroundColor Gray
+
+Write-Host "`n  Status: ✓ Loaded successfully (this run)`n" -ForegroundColor Green
+```
+
+---
+
+### Step 4: Observation Note
+
+✓ **Skills are triggering correctly.**
+
+使用者輸入 `"skill audit"` 成功匹配了 `openspec-skill-audit` 技能的描述（其中明確列出 `"skill audit"` 為觸發短語之一），技能正確執行並產生本報告。
+
+本次對話中，`openspec-skill-audit` 是唯一被呼叫的技能，符合預期——因為這是一個全新的會話，使用者的第一個請求就是執行審計。

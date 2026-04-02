@@ -1,0 +1,43 @@
+╔══════════════════════════════════════════════╗
+║           SKILL INVOCATION AUDIT             ║
+╚══════════════════════════════════════════════╝
+
+Session summary: 2 skill(s) invoked, 2 unique skill(s)
+
+┌─────────────────────────────────────────────────────────────────────┐
+│ #  │ Skill Name              │ Times │ Last Context                  │
+├─────────────────────────────────────────────────────────────────────┤
+│ 1  │ openspec-new-change     │   1   │ User asked to start a new     │
+│    │                         │       │ change                        │
+│ 2  │ openspec-skill-audit    │   1   │ Current audit request         │
+└─────────────────────────────────────────────────────────────────────┘
+
+Details:
+  [1] openspec-new-change
+      → Context: "User asked to start a new change"
+      → Status: ✓ Loaded successfully
+
+  [2] openspec-skill-audit
+      → Context: "User asked to verify whether openspec-new-change was triggered"
+      → Status: ✓ Loaded successfully (this run)
+
+---
+
+PowerShell terminal output commands:
+
+Write-Host "`n╔══════════════════════════════════════════════╗" -ForegroundColor Cyan
+Write-Host "║           SKILL INVOCATION AUDIT             ║" -ForegroundColor Cyan
+Write-Host "╚══════════════════════════════════════════════╝`n" -ForegroundColor Cyan
+Write-Host "  Session summary: 2 skill(s) invoked, 2 unique skill(s)`n" -ForegroundColor White
+Write-Host "  ✓ openspec-new-change" -ForegroundColor Green -NoNewline
+Write-Host "  (1x) — User asked to start a new change" -ForegroundColor Gray
+Write-Host "  ✓ openspec-skill-audit" -ForegroundColor Green -NoNewline
+Write-Host "  (1x) — User asked to verify whether openspec-new-change was triggered" -ForegroundColor Gray
+Write-Host "`n✓ Skills are triggering correctly." -ForegroundColor Green
+
+---
+
+Observation: ✓ Skills are triggering correctly.
+
+openspec-new-change appears in the conversation history as a skill tool invocation.
+It was triggered when the user asked to start a new change, and loaded successfully.

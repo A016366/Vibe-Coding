@@ -1,0 +1,23 @@
+{
+  "skill_name": "openspec-skill-audit",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "本次對話用了哪些 skill？幫我列出來",
+      "expected_output": "顯示本次對話中所有被調用的技能清單，包含技能名稱與調用次數，並透過 PowerShell Write-Host 輸出彩色摘要到終端機",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I just ran openspec-new-change a moment ago. Can you do a skill audit and verify it was actually triggered?",
+      "expected_output": "審查對話歷史，找出 openspec-new-change 的調用紀錄並確認，若存在則標示 ✓，若不存在則說明原因，並將結果輸出到終端機",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "skill audit",
+      "expected_output": "即使是簡短的 'skill audit' 指令也要觸發，掃描對話歷史並回報完整的技能調用摘要，包含終端機輸出",
+      "files": []
+    }
+  ]
+}

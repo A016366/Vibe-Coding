@@ -1,0 +1,27 @@
+{
+  "eval_id": 1,
+  "eval_name": "eval-basic-skill-list",
+  "prompt": "本次對話用了哪些 skill？幫我列出來",
+  "assertions": [
+    {
+      "id": "has-audit-header",
+      "description": "Response includes the SKILL INVOCATION AUDIT header box"
+    },
+    {
+      "id": "mentions-new-change",
+      "description": "Response mentions openspec-new-change as an invoked skill"
+    },
+    {
+      "id": "mentions-explore",
+      "description": "Response mentions openspec-explore as an invoked skill"
+    },
+    {
+      "id": "has-powershell-commands",
+      "description": "Response includes Write-Host PowerShell commands for terminal output"
+    },
+    {
+      "id": "has-invocation-count",
+      "description": "Response includes invocation count or summary statistics"
+    }
+  ]
+}

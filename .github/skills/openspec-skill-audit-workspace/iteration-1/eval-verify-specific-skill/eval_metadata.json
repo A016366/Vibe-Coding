@@ -1,0 +1,6 @@
+{
+  "eval_id": 2,
+  "eval_name": "eval-verify-specific-skill",
+  "prompt": "I just ran openspec-new-change a moment ago. Can you do a skill audit and verify it was actually triggered?",
+  "assertions": []
+}

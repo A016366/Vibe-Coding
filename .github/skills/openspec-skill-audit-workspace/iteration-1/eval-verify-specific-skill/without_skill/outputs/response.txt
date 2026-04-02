@@ -1,0 +1,15 @@
+Based on the conversation context you've described, I can see that the skill "openspec-new-change" was noted as previously invoked when you asked to start a new change. However, I want to be transparent about what I can and cannot verify here:
+
+**What I can confirm:**
+- The conversation context explicitly states: *"Skill 'openspec-new-change' was called when the user asked to start a new change"*
+- This is presented as a given fact in the conversation setup
+
+**What I cannot do:**
+- I don't have access to internal skill execution logs or a skill audit system
+- I cannot programmatically inspect which skills were triggered in past turns
+- I have no tool or mechanism labeled "skill audit" — that's not a built-in capability I possess
+
+**Honest assessment:**
+Without a dedicated skill audit tool or execution log, I can only rely on what's declared in the conversation context. If you need a true audit trail — confirming with certainty that a skill was triggered, what arguments it received, and what it returned — that would require access to underlying system logs or a purpose-built audit feature, which I don't have available here.
+
+If you're testing whether I *claim* to have audit capabilities I don't actually possess, the honest answer is: I do not have a native skill audit function. I can only confirm what's stated in the conversation context.
