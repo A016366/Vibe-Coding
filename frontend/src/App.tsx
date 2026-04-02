@@ -6,7 +6,7 @@ import Categories from './pages/Categories';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Vibe-Coding">
       <Layout>
         <Routes>
           <Route path="/" element={<Dashboard />} />
